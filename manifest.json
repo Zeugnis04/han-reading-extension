@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Han Reading Inspector",
+  "version": "0.1.0",
+  "description": "Look up modern and Middle Chinese readings for selected Han characters.",
+  "permissions": ["activeTab", "contextMenus", "fontSettings", "scripting", "storage"],
+  "icons": {
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Han Reading Inspector",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "32": "assets/icon-32.png",
+      "48": "assets/icon-48.png",
+      "128": "assets/icon-128.png"
+    },
+    "default_popup": "src/popup/popup.html"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["src/lib/hanReadings.js", "src/lib/settings.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Han Reading Inspector</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <form id="lookup-form">
+        <label for="character-input">Han character</label>
+        <div class="lookup-row">
+          <input
+            id="character-input"
+            name="character"
+            type="text"
+            maxlength="2"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            placeholder="東"
+            required
+          >
+          <button type="submit">Look up</button>
+        </div>
+      </form>
+      <p id="status" role="status" aria-live="polite"></p>
+      <section id="results" hidden></section>
+      <footer>
+        <button id="open-options" type="button">Options</button>
+      </footer>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Han Reading Inspector Options</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Han Reading Inspector</h1>
+        <p>Choose which readings are shown and arrange their order.</p>
+      </header>
+
+      <section class="theme-panel">
+        <div class="manager-header">
+          <h2>Theme</h2>
+        </div>
+        <div class="theme-grid">
+          <label>
+            Font
+            <select id="theme-font"></select>
+          </label>
+          <label>
+            Background
+            <input id="theme-background" type="color">
+          </label>
+          <label>
+            Text
+            <input id="theme-text" type="color">
+          </label>
+          <label>
+            Accent
+            <input id="theme-accent" type="color">
+          </label>
+          <label>
+            Border
+            <input id="theme-border" type="color">
+          </label>
+          <label class="opacity-control">
+            Window opacity
+            <span id="theme-opacity-value"></span>
+            <input id="theme-opacity" type="range" min="0.5" max="1" step="0.01">
+          </label>
+        </div>
+      </section>
+
+      <section class="order-manager">
+        <div class="manager-header">
+          <h2>Modern Readings</h2>
+          <span id="modern-count" class="count"></span>
+        </div>
+        <div id="modern-fields" class="field-list" aria-label="Modern reading order"></div>
+      </section>
+
+      <section class="order-manager">
+        <div class="manager-header">
+          <h2>Middle Chinese</h2>
+          <span id="middle-chinese-count" class="count"></span>
+        </div>
+        <div id="middle-chinese-fields" class="field-list" aria-label="Middle Chinese field order"></div>
+      </section>
+
+      <footer>
+        <button id="reset" type="button">Reset</button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </footer>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

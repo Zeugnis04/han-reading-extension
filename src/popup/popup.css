@@ -1,0 +1,135 @@
+:root {
+  color-scheme: light;
+  --hri-font-family: "Noto Serif KR", Georgia, "Times New Roman", Times, "Songti SC", SimSun, serif;
+  --hri-bg-color: #fbfcfd;
+  --hri-text-color: #17202a;
+  --hri-accent-color: #2454a6;
+  --hri-border-color: #d7dce2;
+  --hri-opacity: 0.96;
+}
+
+body {
+  width: 380px;
+  margin: 0;
+  background: var(--hri-bg-color);
+  color: var(--hri-text-color);
+  font-family: var(--hri-font-family);
+  font-size: 14px;
+  line-height: 1.45;
+  opacity: var(--hri-opacity);
+}
+
+main {
+  padding: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: color-mix(in srgb, var(--hri-text-color) 78%, var(--hri-bg-color));
+  font-weight: 700;
+}
+
+.lookup-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+input,
+button {
+  border-radius: 6px;
+  font: inherit;
+}
+
+input {
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--hri-border-color);
+  background: #fff;
+  font-size: 24px;
+  line-height: 1;
+}
+
+button {
+  padding: 8px 12px;
+  border: 1px solid var(--hri-text-color);
+  background: var(--hri-text-color);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+footer {
+  margin-top: 14px;
+}
+
+#open-options {
+  border-color: var(--hri-border-color);
+  background: #fff;
+  color: var(--hri-text-color);
+}
+
+#status {
+  min-height: 20px;
+  margin: 10px 0;
+  color: color-mix(in srgb, var(--hri-text-color) 55%, var(--hri-bg-color));
+}
+
+#results[hidden] {
+  display: none;
+}
+
+.character-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.character-heading h1 {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.character-heading a {
+  margin-bottom: 6px;
+  color: var(--hri-accent-color);
+}
+
+h2 {
+  margin: 16px 0 8px;
+  font-size: 15px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: minmax(116px, 0.44fr) minmax(0, 1fr);
+  margin: 0;
+}
+
+dt,
+dd {
+  min-width: 0;
+  margin: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--hri-border-color) 65%, transparent);
+}
+
+dt {
+  padding-right: 12px;
+  color: color-mix(in srgb, var(--hri-text-color) 62%, var(--hri-bg-color));
+  font-weight: 600;
+}
+
+dd {
+  overflow-wrap: anywhere;
+}
+
+.empty {
+  color: color-mix(in srgb, var(--hri-text-color) 55%, var(--hri-bg-color));
+  font-style: italic;
+}

@@ -1,0 +1,138 @@
+#han-reading-inspector {
+  --hri-font-family: "Noto Serif KR", Georgia, "Times New Roman", Times, "Songti SC", SimSun, serif;
+  --hri-bg-color: #fbfcfd;
+  --hri-text-color: #17202a;
+  --hri-accent-color: #2454a6;
+  --hri-border-color: #d7dce2;
+  --hri-opacity: 0.96;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  left: auto;
+  z-index: 2147483647;
+  box-sizing: border-box;
+  width: min(420px, calc(100vw - 32px));
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  padding: 16px;
+  border: 1px solid var(--hri-border-color);
+  border-radius: 8px;
+  background: var(--hri-bg-color);
+  color: var(--hri-text-color);
+  box-shadow: 0 18px 50px rgba(17, 24, 39, 0.22);
+  font-family: var(--hri-font-family);
+  font-size: 13px;
+  line-height: 1.45;
+  opacity: var(--hri-opacity);
+  backdrop-filter: blur(8px);
+}
+
+#han-reading-inspector * {
+  box-sizing: border-box;
+  font: inherit;
+  letter-spacing: 0;
+}
+
+#han-reading-inspector .hri-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+#han-reading-inspector h2 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+#han-reading-inspector h3 {
+  margin: 18px 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#han-reading-inspector h4 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#han-reading-inspector .hri-close {
+  display: inline-grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid #c8d0d9;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--hri-text-color);
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#han-reading-inspector .hri-grid,
+#han-reading-inspector .hri-mc-card dl {
+  display: grid;
+  grid-template-columns: minmax(112px, 0.42fr) minmax(0, 1fr);
+  gap: 0;
+  margin: 0;
+}
+
+#han-reading-inspector dt,
+#han-reading-inspector dd {
+  min-width: 0;
+  margin: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--hri-border-color) 65%, transparent);
+}
+
+#han-reading-inspector dt {
+  padding-right: 12px;
+  color: color-mix(in srgb, var(--hri-text-color) 62%, var(--hri-bg-color));
+  font-weight: 600;
+}
+
+#han-reading-inspector dd {
+  overflow-wrap: anywhere;
+  color: var(--hri-text-color);
+}
+
+#han-reading-inspector .hri-empty,
+#han-reading-inspector .hri-status {
+  color: color-mix(in srgb, var(--hri-text-color) 55%, var(--hri-bg-color));
+  font-style: italic;
+}
+
+#han-reading-inspector .hri-error {
+  margin: 0;
+  color: #a33131;
+}
+
+#han-reading-inspector .hri-middle {
+  display: grid;
+  gap: 12px;
+}
+
+#han-reading-inspector .hri-mc-card {
+  padding-top: 2px;
+}
+
+#han-reading-inspector .hri-source {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--hri-accent-color);
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  #han-reading-inspector {
+    width: auto;
+    min-width: min(360px, calc(100vw - 24px));
+    max-height: calc(100vh - 24px);
+  }
+}
